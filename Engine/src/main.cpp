@@ -1,16 +1,26 @@
+#include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 
-int main() {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Mini Engine");
+int main()
+{
+    sf::RenderWindow window(sf::VideoMode({ 800, 600 }), "SFML window");
 
-    while (window.isOpen()) {
-        sf::Event event;
-        while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed)
+
+    while (window.isOpen())
+    {
+        while (const std::optional event = window.pollEvent())
+        {
+            if (event->is<sf::Event::Closed>())
                 window.close();
         }
 
-        window.clear(sf::Color::Black);
+        window.clear();
+
+        sf::CircleShape shape(100.f);
+        shape.setFillColor(sf::Color::Green);
+        shape.setPosition({ 350.f, 250.f });
+        window.draw(shape);
+
         window.display();
     }
 
