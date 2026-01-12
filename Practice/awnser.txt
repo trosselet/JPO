@@ -1,0 +1,115 @@
+Lvl0 : 
+
+Exo 1 : 
+#include <iostream>
+
+int main() {
+    std::cout << "Bonjour ! Quel est ton prénom ? ";
+    std::string name;
+    std::cin >> name;
+    std::cout << "Salut " << name << " !" << std::endl;
+    return 0;
+}
+
+Exo2 : 
+#include <iostream>
+
+int main() {
+    int a, b;
+    std::cout << "Entrez le premier nombre : ";
+    std::cin >> a;
+    std::cout << "Entrez le deuxième nombre : ";
+    std::cin >> b;
+    std::cout << "La somme est : " << (a + b) << std::endl;
+    return 0;
+}
+
+Lvl1 : 
+Exo3 : 
+#include <iostream>
+
+int main() {
+    int n;
+    std::cout << "Entrez un nombre : ";
+    std::cin >> n;
+
+    if (n % 2 == 0)
+        std::cout << n << " est pair" << std::endl;
+    else
+        std::cout << n << " est impair" << std::endl;
+
+    return 0;
+}
+
+Exo4 : 
+#include <iostream>
+
+int main() {
+    int a, b;
+    std::cout << "Entrez deux nombres : ";
+    std::cin >> a >> b;
+
+    if (a > b)
+        std::cout << a << " est le plus grand" << std::endl;
+    else if (b > a)
+        std::cout << b << " est le plus grand" << std::endl;
+    else
+        std::cout << "Les deux nombres sont égaux" << std::endl;
+
+    return 0;
+}
+
+Lvl2 :
+Exo5 : 
+#include <iostream>
+
+int main() {
+    int n;
+    std::cout << "Entrez un nombre : ";
+    std::cin >> n;
+
+    for (int i = 1; i <= n; ++i) {
+        std::cout << i << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
+
+Exo6 :
+#include <iostream>
+
+int main() {
+    int n;
+    std::cout << "Entrez un nombre : ";
+    std::cin >> n;
+
+    int somme = 0;
+    for (int i = 1; i <= n; ++i) {
+        somme += i;
+    }
+
+    std::cout << "La somme de 1 à " << n << " est : " << somme << std::endl;
+    return 0;
+}
+
+Lvl3 :
+Exo7 : 
+#include <iostream>
+
+int main() {
+    int nums[5];
+
+    for (int i = 0; i < 5; ++i) {
+        std::cout << "Entrez le nombre " << (i + 1) << " : ";
+        std::cin >> nums[i];
+    }
+
+    std::cout << "Les nombres que vous avez entrés sont : ";
+    for (int i = 0; i < 5; ++i) {
+        std::cout << nums[i] << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
